@@ -1,0 +1,37 @@
+{
+  "name": "neutrino-preset-elm",
+  "version": "1.0.0",
+  "description": "Neutrino preset that supports building Elm applications.",
+  "main": "index.js",
+  "scripts": {
+    "test": "ava test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/guzart/neutrino-preset-elm.git"
+  },
+  "keywords": [
+    "neutrino",
+    "neutrino-preset",
+    "elm"
+  ],
+  "author": "Arturo Guzman",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/guzart/neutrino-preset-elm/issues"
+  },
+  "homepage": "https://github.com/guzart/neutrino-preset-elm#readme",
+  "dependencies": {
+    "elm-hot-loader": "^0.5.4",
+    "elm-webpack-loader": "^4.3.0",
+    "neutrino-preset-web": "^5.0.0"
+  },
+  "peerDependencies": {
+    "neutrino": "^5.0.0"
+  },
+  "devDependencies": {
+    "ava": "^0.18.2",
+    "neutrino": "^5.0.0",
+    "webpack": "^2.3.2"
+  }
+}
