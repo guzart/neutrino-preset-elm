@@ -1,6 +1,7 @@
 # Neutrino elm Preset
 
 [![Build Status](https://travis-ci.org/guzart/neutrino-preset-elm.svg?branch=master)](https://travis-ci.org/guzart/neutrino-preset-elm)
+[![npm version](https://badge.fury.io/js/neutrino-preset-elm.svg)](https://badge.fury.io/js/neutrino-preset-elm)
 
 ## Requirements
 
