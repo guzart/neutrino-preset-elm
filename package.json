@@ -1,9 +1,10 @@
 {
   "name": "neutrino-preset-elm",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "Neutrino preset that supports building Elm applications.",
   "main": "index.js",
   "scripts": {
+    "release": "standard-version -a -r",
     "test": "ava test"
   },
   "repository": {
@@ -32,6 +33,7 @@
   "devDependencies": {
     "ava": "^0.18.2",
     "neutrino": "^5.0.0",
+    "standard-version": "^4.0.0",
     "webpack": "^2.3.2"
   }
 }
