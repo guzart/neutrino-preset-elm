@@ -77,7 +77,7 @@ Add your elm application entry point to the `src` directory.
 
 ```elm
 -- src/Main.elm
-module App exposing (..)
+module Main exposing (..)
 
 import Html exposing (Html, div, text, program)
 
