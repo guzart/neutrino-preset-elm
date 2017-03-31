@@ -48,5 +48,14 @@ module.exports = (neutrino) => {
             warn: true
           })
           .end();
+  } else {
+    config
+      .plugin('copy')
+      .tap((args) => {
+        // (patterns: Array<string>, options: Object)
+        if (!args[1].ignore) { args[1].ignore = []; }
+        args[1].ignore.push('*.elm');
+        return args;
+      });
   }
 };
