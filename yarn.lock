@@ -103,7 +103,7 @@ ansi-regex@^2.0.0:
   version "2.1.1"
   resolved "https://registry.yarnpkg.com/ansi-regex/-/ansi-regex-2.1.1.tgz#c3b33ab5ee360d86e0e628f0468ae7ef27d654df"
 
-ansi-styles@^2.2.1:
+ansi-styles@^2.1.0, ansi-styles@^2.2.1:
   version "2.2.1"
   resolved "https://registry.yarnpkg.com/ansi-styles/-/ansi-styles-2.2.1.tgz#b432dd3358b634cf75e1e4664368240533c1ddbe"
 
@@ -1279,6 +1279,16 @@ center-align@^0.1.1:
     align-text "^0.1.3"
     lazy-cache "^1.0.3"
 
+chalk@1.1.1:
+  version "1.1.1"
+  resolved "https://registry.yarnpkg.com/chalk/-/chalk-1.1.1.tgz#509afb67066e7499f7eb3535c77445772ae2d019"
+  dependencies:
+    ansi-styles "^2.1.0"
+    escape-string-regexp "^1.0.2"
+    has-ansi "^2.0.0"
+    strip-ansi "^3.0.0"
+    supports-color "^2.0.0"
+
 chalk@^0.4.0:
   version "0.4.0"
   resolved "https://registry.yarnpkg.com/chalk/-/chalk-0.4.0.tgz#5199a3ddcd0c1efe23bc08c1b027b06176e0c64f"
@@ -1457,7 +1467,7 @@ combined-stream@^1.0.5, combined-stream@~1.0.5:
   dependencies:
     delayed-stream "~1.0.0"
 
-commander@2.9.x, commander@^2.9.0:
+commander@2.9.0, commander@2.9.x, commander@^2.9.0:
   version "2.9.0"
   resolved "https://registry.yarnpkg.com/commander/-/commander-2.9.0.tgz#9c99094176e12240cb22d6c5146098400fe0f7d4"
   dependencies:
@@ -1499,7 +1509,7 @@ concat-map@0.0.1:
   version "0.0.1"
   resolved "https://registry.yarnpkg.com/concat-map/-/concat-map-0.0.1.tgz#d8a96bd77fd68df7793a73036a3ba0d5405d477b"
 
-concat-stream@^1.4.10:
+concat-stream@^1.4.10, concat-stream@^1.4.7:
   version "1.6.0"
   resolved "https://registry.yarnpkg.com/concat-stream/-/concat-stream-1.6.0.tgz#0aac662fd52be78964d5532f694784e70110acf7"
   dependencies:
@@ -1762,6 +1772,20 @@ create-hmac@^1.1.0, create-hmac@^1.1.2:
   dependencies:
     create-hash "^1.1.0"
     inherits "^2.0.1"
+
+cross-spawn-async@^2.0.0:
+  version "2.2.5"
+  resolved "https://registry.yarnpkg.com/cross-spawn-async/-/cross-spawn-async-2.2.5.tgz#845ff0c0834a3ded9d160daca6d390906bb288cc"
+  dependencies:
+    lru-cache "^4.0.0"
+    which "^1.2.8"
+
+cross-spawn@2.1.0:
+  version "2.1.0"
+  resolved "https://registry.yarnpkg.com/cross-spawn/-/cross-spawn-2.1.0.tgz#9bc27f40423e98a445efe9269983e4f4055cde3a"
+  dependencies:
+    cross-spawn-async "^2.0.0"
+    spawn-sync "1.0.13"
 
 cross-spawn@4.0.0, cross-spawn@^4.0.0:
   version "4.0.0"
@@ -2094,6 +2118,25 @@ elliptic@^6.0.0:
     inherits "^2.0.1"
     minimalistic-assert "^1.0.0"
     minimalistic-crypto-utils "^1.0.0"
+
+elm-css-webpack-loader@^3.1.0:
+  version "3.1.0"
+  resolved "https://registry.yarnpkg.com/elm-css-webpack-loader/-/elm-css-webpack-loader-3.1.0.tgz#cb8fbbaa529015aeb69e03e57487da1a241066ba"
+  dependencies:
+    elm-css "^0.6.0"
+    loader-utils "^1.0.3"
+    lodash "^4.17.4"
+    node-elm-compiler "^4.3.0"
+    temp "^0.8.3"
+
+elm-css@^0.6.0:
+  version "0.6.0"
+  resolved "https://registry.yarnpkg.com/elm-css/-/elm-css-0.6.0.tgz#64bcb8f6adeedfde392d768c07f552ffc5242f75"
+  dependencies:
+    chalk "1.1.1"
+    commander "2.9.0"
+    node-elm-compiler "2.3.2"
+    tmp "0.0.28"
 
 elm-hot-loader@^0.5.4:
   version "0.5.4"
@@ -3391,7 +3434,7 @@ loader-utils@^0.2.12, loader-utils@^0.2.15, loader-utils@^0.2.16:
     json5 "^0.5.0"
     object-assign "^4.0.1"
 
-loader-utils@^1.0.2:
+loader-utils@^1.0.2, loader-utils@^1.0.3:
   version "1.1.0"
   resolved "https://registry.yarnpkg.com/loader-utils/-/loader-utils-1.1.0.tgz#c98aef488bcceda2ffb5e2de646d6a754429f5cd"
   dependencies:
@@ -3459,11 +3502,15 @@ lodash.uniq@^4.3.0:
   version "4.5.0"
   resolved "https://registry.yarnpkg.com/lodash.uniq/-/lodash.uniq-4.5.0.tgz#d0225373aeb652adc1bc82e4945339a842754773"
 
+lodash@3.10.1:
+  version "3.10.1"
+  resolved "https://registry.yarnpkg.com/lodash/-/lodash-3.10.1.tgz#5bf45e8e49ba4189e17d482789dfd15bd140b7b6"
+
 lodash@4.14.2, lodash@^4.14.0, lodash@^4.2.0, lodash@^4.3.0:
   version "4.14.2"
   resolved "https://registry.yarnpkg.com/lodash/-/lodash-4.14.2.tgz#bbccce6373a400fbfd0a8c67ca42f6d1ef416432"
 
-lodash@^4.0.0, lodash@^4.17.2, lodash@^4.17.3, lodash@^4.2.1:
+lodash@^4.0.0, lodash@^4.17.2, lodash@^4.17.3, lodash@^4.17.4, lodash@^4.2.1:
   version "4.17.4"
   resolved "https://registry.yarnpkg.com/lodash/-/lodash-4.17.4.tgz#78203a4d1c328ae1d86dca6460e369b57f4055ae"
 
@@ -3498,7 +3545,7 @@ lowercase-keys@^1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/lowercase-keys/-/lowercase-keys-1.0.0.tgz#4e3366b39e7f5457e35f1324bdf6f88d0bfc7306"
 
-lru-cache@^4.0.1:
+lru-cache@^4.0.0, lru-cache@^4.0.1:
   version "4.0.2"
   resolved "https://registry.yarnpkg.com/lru-cache/-/lru-cache-4.0.2.tgz#1d17679c069cda5d040991a09dbc2c0db377e55e"
   dependencies:
@@ -3846,7 +3893,15 @@ node-dir@^0.1.10:
   dependencies:
     minimatch "^3.0.2"
 
-node-elm-compiler@^4.2.1:
+node-elm-compiler@2.3.2:
+  version "2.3.2"
+  resolved "https://registry.yarnpkg.com/node-elm-compiler/-/node-elm-compiler-2.3.2.tgz#38fa4221a0d26185434aa6f71edd90e432ef8f15"
+  dependencies:
+    cross-spawn "2.1.0"
+    lodash "3.10.1"
+    temp "^0.8.3"
+
+node-elm-compiler@^4.2.1, node-elm-compiler@^4.3.0:
   version "4.3.0"
   resolved "https://registry.yarnpkg.com/node-elm-compiler/-/node-elm-compiler-4.3.0.tgz#9f4fe793cad6d59a6a124207ac168faf5886d24e"
   dependencies:
@@ -4072,7 +4127,11 @@ os-locale@^1.4.0:
   dependencies:
     lcid "^1.0.0"
 
-os-tmpdir@^1.0.0, os-tmpdir@^1.0.1:
+os-shim@^0.1.2:
+  version "0.1.3"
+  resolved "https://registry.yarnpkg.com/os-shim/-/os-shim-0.1.3.tgz#6b62c3791cf7909ea35ed46e17658bb417cb3917"
+
+os-tmpdir@^1.0.0, os-tmpdir@^1.0.1, os-tmpdir@~1.0.1:
   version "1.0.2"
   resolved "https://registry.yarnpkg.com/os-tmpdir/-/os-tmpdir-1.0.2.tgz#bbe67406c79aa85c5cfec766fe5734555dfa1274"
 
@@ -5124,6 +5183,13 @@ source-map@^0.4.4:
   dependencies:
     amdefine ">=0.0.4"
 
+spawn-sync@1.0.13:
+  version "1.0.13"
+  resolved "https://registry.yarnpkg.com/spawn-sync/-/spawn-sync-1.0.13.tgz#904091b9ad48a0f3afb0e84752154c01e82fd8d8"
+  dependencies:
+    concat-stream "^1.4.7"
+    os-shim "^0.1.2"
+
 spdx-correct@~1.0.0:
   version "1.0.2"
   resolved "https://registry.yarnpkg.com/spdx-correct/-/spdx-correct-1.0.2.tgz#4b3073d933ff51f3912f03ac5519498a4150db40"
@@ -5388,6 +5454,12 @@ timers-browserify@^2.0.2:
   resolved "https://registry.yarnpkg.com/timers-browserify/-/timers-browserify-2.0.2.tgz#ab4883cf597dcd50af211349a00fbca56ac86b86"
   dependencies:
     setimmediate "^1.0.4"
+
+tmp@0.0.28:
+  version "0.0.28"
+  resolved "https://registry.yarnpkg.com/tmp/-/tmp-0.0.28.tgz#172735b7f614ea7af39664fa84cf0de4e515d120"
+  dependencies:
+    os-tmpdir "~1.0.1"
 
 to-arraybuffer@^1.0.0:
   version "1.0.1"
@@ -5715,7 +5787,7 @@ which-module@^1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/which-module/-/which-module-1.0.0.tgz#bba63ca861948994ff307736089e3b96026c2a4f"
 
-which@^1.2.9:
+which@^1.2.8, which@^1.2.9:
   version "1.2.14"
   resolved "https://registry.yarnpkg.com/which/-/which-1.2.14.tgz#9a87c4378f03e827cecaf1acdf56c736c01c14e5"
   dependencies:

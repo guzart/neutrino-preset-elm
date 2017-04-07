@@ -4,36 +4,53 @@ const { join } = require('path');
 const MODULES = join(__dirname, 'node_modules');
 
 module.exports = (neutrino) => {
-  const { config } = neutrino;
-
   neutrino.use(web);
 
-  config.module.rule('elm')
-    .test(/\.elm$/)
-      .exclude
-        .add(/elm-stuff/)
-        .add(/node_modules/)
+  neutrino.config
+    .module
+      .rule('elm')
+        .test(/\.elm$/)
+        .exclude
+          .add(/elm-stuff/)
+          .add(/node_modules/)
+          .end()
+        .use('elm')
+          .loader(require.resolve('elm-webpack-loader'))
+          .options({ verbose: true, warn: true })
+          .end()
         .end()
-    .use('elm')
-      .loader('elm-webpack-loader')
-      .options({
-        verbose: true,
-        warn: true
-      });
-
-  let noParse = config.module.get('noParse') || [];
-  if (!noParse.push) noParse = [noParse];
-  noParse.push(/\.elm$/);
-  config.module.set('noParse', noParse);
-
-  config.resolve.modules.add(MODULES);
-  config.resolve.extensions.add('.elm');
-  config.resolveLoader.modules.add(MODULES);
+      .rule('elmcss')
+        .test(/Stylesheets\.elm$/)
+        .use('style')
+          .loader(require.resolve('style-loader'))
+          .end()
+        .use('css')
+          .loader(require.resolve('css-loader'))
+          .end()
+        .use('elm')
+          .loader(require.resolve('elm-css-webpack-loader'))
+          .end()
+        .end()
+      .end()
+    .resolve
+      .modules
+        .add(MODULES)
+        .end()
+      .extensions
+        .add('.elm')
+        .end()
+      .end()
+    .resolveLoader
+      .modules
+        .add(MODULES)
+        .end()
+      .end()
 
   if (process.env.NODE_ENV === 'development') {
-    config.module.rules.delete('elm');
-    config.module.rule('elm')
-      .test(/\.elm$/)
+    neutrino.config.module.rules.delete('elm');
+    neutrino.config.module
+      .rule('elm')
+        .test(/\.elm$/)
         .exclude
           .add(/elm-stuff/)
           .add(/node_modules/)
@@ -49,7 +66,7 @@ module.exports = (neutrino) => {
           })
           .end();
   } else {
-    config
+    neutrino.config
       .plugin('copy')
       .tap((args) => {
         // (patterns: Array<string>, options: Object)
