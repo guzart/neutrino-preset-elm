@@ -23,18 +23,18 @@
   },
   "homepage": "https://github.com/guzart/neutrino-preset-elm#readme",
   "dependencies": {
-    "elm-css-webpack-loader": "^3.1.0",
+    "elm-css-webpack-loader": "^3.3.0",
     "elm-hot-loader": "^0.5.4",
-    "elm-webpack-loader": "^4.3.0",
-    "neutrino-preset-web": "^5.0.0"
+    "elm-webpack-loader": "^4.3.1",
+    "neutrino-preset-web": "^6.0.0"
   },
   "peerDependencies": {
-    "neutrino": "^5.0.0"
+    "neutrino": "^6.0.0"
   },
   "devDependencies": {
     "ava": "^0.18.2",
-    "neutrino": "^5.0.0",
+    "neutrino": "^6.0.0",
     "standard-version": "^4.0.0",
-    "webpack": "^2.3.2"
+    "webpack": "^2.6.1"
   }
 }
