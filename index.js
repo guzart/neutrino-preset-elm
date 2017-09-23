@@ -1,10 +1,16 @@
 const web = require('neutrino-preset-web');
 const { join } = require('path');
+const merge = require('deepmerge');
 
 const MODULES = join(__dirname, 'node_modules');
 
-module.exports = (neutrino) => {
-  neutrino.use(web);
+module.exports = (neutrino, opts = {}) => {
+  const options = merge({
+    debug: false,
+    presetWeb: {},
+  }, opts);
+
+  neutrino.use(web, options.presetWeb);
 
   neutrino.config
     .module
@@ -61,8 +67,9 @@ module.exports = (neutrino) => {
         .use('elm')
           .loader('elm-webpack-loader')
           .options({
+            debug: options.debug,
             verbose: true,
-            warn: true
+            warn: true,
           })
           .end();
   } else {

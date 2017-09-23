@@ -7,7 +7,7 @@
 
 - Node.js v6.9+
 - Yarn or npm client
-- Neutrino v5
+- Neutrino v6
 
 ## Installation
 
@@ -144,3 +144,37 @@ Start the app, then open a browser to the address in the console:
 ✔ Development server running on: http://localhost:5000
 ✔ Build completed
 ```
+
+## Configuration
+
+Add a `.neutrinorc.js` file to the root of your project
+
+```javascript
+// .neutrinorc.js
+module.exports = {
+  use: [
+    ['neutrino-preset-elm', {
+      presetWeb: {},
+      debug: true,
+    }],
+  ],
+}
+```
+
+Update your package.json file
+```json
+{
+  "scripts": {
+    "start": "neutrino start",
+    "build": "neutrino build"
+  }
+}
+```
+
+#### `presetWeb`
+
+Passes options to neutrino-preset-web. See https://neutrino.js.org/presets/neutrino-preset-web/#preset-options.
+
+#### `debug`
+
+Turn on elm debugger during development.
