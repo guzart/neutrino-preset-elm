@@ -2,6 +2,11 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="2.0.0"></a>
+# [2.0.0](https://github.com/guzart/neutrino-preset-elm/compare/v2.0.0-beta.1...v2.0.0) (2017-09-27)
+
+
+
 <a name="1.2.0"></a>
 # [1.2.0](https://github.com/guzart/neutrino-preset-elm/compare/v1.1.0...v1.2.0) (2017-03-31)
 
