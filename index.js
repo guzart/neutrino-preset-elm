@@ -70,6 +70,7 @@ module.exports = (neutrino, opts = {}) => {
             debug: options.debug,
             verbose: true,
             warn: true,
+            forceWatch: true,
           })
           .end();
   } else {
