@@ -5,6 +5,8 @@ All notable changes to this project will be documented in this file. See [standa
 <a name="2.1.0"></a>
 # [2.1.0](https://github.com/guzart/neutrino-preset-elm/compare/v2.0.0...v2.1.0) (2017-10-04)
 
+* watch all .elm files, not just those explicitly required
+* fix hot module replacement
 
 
 <a name="2.0.0"></a>
