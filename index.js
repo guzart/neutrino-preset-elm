@@ -1,4 +1,4 @@
-const web = require('neutrino-preset-web');
+const web = require('@neutrinojs/web');
 const { join } = require('path');
 const merge = require('deepmerge');
 
@@ -19,6 +19,7 @@ module.exports = (neutrino, opts = {}) => {
         .exclude
           .add(/elm-stuff/)
           .add(/node_modules/)
+          .add(/Stylesheets\.elm$/)
           .end()
         .use('elm')
           .loader(require.resolve('elm-webpack-loader'))
