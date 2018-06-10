@@ -173,7 +173,7 @@ Update your package.json file
 
 #### `presetWeb`
 
-Passes options to neutrino-preset-web. See https://neutrino.js.org/presets/neutrino-preset-web/#preset-options.
+Passes options to neutrino-preset-web. See https://neutrinojs.org/packages/web/#preset-options.
 
 #### `debug`
 
